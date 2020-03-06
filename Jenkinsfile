@@ -14,6 +14,7 @@ pipeline {
             steps {
 		        sh '  chmod 777 ./git_changes.sh'
         	    sh './git_changes.sh'
+		    sh 'git push -f origin HEAD:master'
             }
         }
         stage('Apply_to_db') {
