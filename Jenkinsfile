@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Import_schema_apply_scripts') {
             steps {
-		        sh ' sudo chmod 777 ./git_changes.sh'
+		        sh '  chmod 777 ./git_changes.sh'
         	    sh './git_changes.sh'
             }
         }
